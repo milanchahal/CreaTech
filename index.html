@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART MARITIME</title>
+</head>
+<body>
+    <div id="navbar-container"></div> 
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+            
+            // Manually re-run the script after inserting navbar
+            let script = document.createElement('script');
+            script.src = 'navbar.js'; // Separate JS file for navbar functionality
+            document.body.appendChild(script);
+        });
+</script>
+
+
+    <!-- heading -->
+    <h1 class="smart-maritime">Smart Maritime</h1>
+
+    <style>
+    .smart-maritime {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        color: #04074b;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 50px 0;
+        position: relative;
+        text-shadow: 
+            3px 3px 5px rgba(0, 0, 0, 0.5), 
+            0px 0px 15px rgba(255, 255, 255, 0.5);
+        transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+    
+    .smart-maritime:hover {
+        transform: scale(1.05);
+        text-shadow: 
+            5px 5px 10px rgba(0, 0, 0, 0.7), 
+            0px 0px 20px rgba(255, 255, 255, 0.8);
+    }
+    </style>
+    
+
+    <!-- Infinite Scroll -->
+    <div class="scroll-container">
+        <div class="scroll-content">
+            <img src="infinite1.jpg" alt="Image 1">
+            <img src="infinite2.jpg" alt="Image 2">
+            <img src="port4.jpg" alt="Image 3">
+            <img src="infinite3.jpg" alt="Image 4">
+            <img src="imfinite4.jpg" alt="Image 5">
+            <img src="infinite5.jpg" alt="Image 6">
+            <img src="port2.jpg" alt="Image 4">
+            <img src="Port1.jpg" alt="Image 5">
+            <img src="portback.webp" alt="Image 6">
+            <!-- Duplicate for seamless looping -->
+            <img src="infinite1.jpg" alt="Image 1">
+            <img src="infinite2.jpg" alt="Image 2">
+            <img src="port4.jpg" alt="Image 3">
+            <img src="infinite3.jpg" alt="Image 4">
+            <img src="imfinite4.jpg" alt="Image 5">
+            <img src="infinite5.jpg" alt="Image 6">
+            <img src="port2.jpg" alt="Image 4">
+            <img src="Port1.jpg" alt="Image 5">
+            <img src="portback.webp" alt="Image 6">
+            <!-- Duplicate for seamless looping -->
+            <img src="infinite1.jpg" alt="Image 1">
+            <img src="infinite2.jpg" alt="Image 2">
+            <img src="port4.jpg" alt="Image 3">
+            <img src="infinite3.jpg" alt="Image 4">
+            <img src="imfinite4.jpg" alt="Image 5">
+            <img src="infinite5.jpg" alt="Image 6">
+            <img src="port2.jpg" alt="Image 4">
+            <img src="Port1.jpg" alt="Image 5">
+            <img src="portback.webp" alt="Image 6">
+            <!-- Duplicate for seamless looping -->
+            <img src="infinite1.jpg" alt="Image 1">
+            <img src="infinite2.jpg" alt="Image 2">
+            <img src="port4.jpg" alt="Image 3">
+            <img src="infinite3.jpg" alt="Image 4">
+            <img src="imfinite4.jpg" alt="Image 5">
+            <img src="infinite5.jpg" alt="Image 6">
+            <img src="port2.jpg" alt="Image 4">
+            <img src="Port1.jpg" alt="Image 5">
+            <img src="portback.webp" alt="Image 6">
+            
+        </div>
+    </div>
+    
+    <style>
+    .scroll-container {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        background: black;
+        padding: 25px 0;
+    }
+    .scroll-content {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        animation: scroll 15s linear infinite;
+    }
+    .scroll-content img {
+        width: 305px; /* Adjust as needed */
+        height: 255px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+    </style>
+
+
+    <!-- About us -->
+    <section id="about-us" class="about-section">
+        <div class="about-container">
+            <h2 class="about-heading">About Us - Smart Maritime Solutions</h2>
+            <div class="about-content">
+                <div class="about-box">
+                    <div class="card-front">
+                        <h3>🌊 Intelligent Ballast Water Treatment</h3>
+                        <p>Ensuring ships discharge clean, compliant water while minimizing environmental impact.</p>
+                        <p class="hover-text">Hover to know more!</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>🌊 Intelligent Ballast Water Treatment</h3>
+                        <p>🔹 <strong>Micro-Filtration Technology –</strong> Removes large contaminants like marine organisms and sediments before water enters the ballast system. <br>🔹 <strong>Electric Shock / Thermal Sterilization –</strong> Eliminates harmful pathogens without chemical treatment, reducing secondary pollution risks.<br>🔹 <strong>Energy-Efficient Operations –</strong> Integrated with onboard turbines to recover and utilize energy from water flow.</p>
+                    </div>
+                </div>
+                <div class="about-box">
+                    <div class="card-front">
+                        <h3>⚡ Turbine-Integrated Energy Recovery</h3>
+                        <p>Harnessing onboard water flow to generate electricity, reducing dependency on fossil fuels.</p>
+                        <p class="hover-text">Hover to know more!</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>⚡ Turbine-Integrated Energy Recovery</h3>
+                        <p>🔹 <strong>Dual Functionality –</strong> Converts kinetic energy from water flow into electricity for onboard usage.<br>🔹<strong> Sustainable Power Generation –</strong> Reduces dependency on fossil fuels, cutting carbon emissions.<br>🔹 <strong>Renewable Integration –</strong> Works alongside solar and wind systems to optimize energy use.</p>
+                    </div>
+                </div>
+                <div class="about-box">
+                    <div class="card-front">
+                        <h3>🌍 Breakwater Turbines for Coastal Energy</h3>
+                        <p>Installing turbines along breakwaters to harness wave energy and power port facilities.</p>
+                        <p class="hover-text">Hover to know more!</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>🌍 Breakwater Turbines for Coastal Energy</h3>
+                        <p>🔹 <strong>Eco-Friendly Electricity –</strong> Utilizes ocean waves to generate sustainable energy for coastal areas. <br>🔹 <strong>Dual Purpose Infrastructure –</strong> Enhances breakwater stability while producing renewable energy.<br>🔹 <strong>Resilient Power Supply –</strong> Provides reliable power even in harsh maritime conditions.</p>
+                    </div>
+                </div>
+                <div class="about-box">
+                    <div class="card-front">
+                        <h3>🛁 Solar-Powered Smart Buoys</h3>
+                        <p>A real-time water pollution monitoring system using IoT-enabled smart buoys.</p>
+                        <p class="hover-text">Hover to know more!</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>🛁 Solar-Powered Smart Buoys</h3>
+                        <p>🔹 <strong>Live Pollution Tracking –</strong> Continuously monitors water quality in real-time using IoT sensors. <br>🔹 <strong>Automated Alerts –</strong> Notifies authorities instantly in case of contamination or oil spills.<br>🔹 <strong>Cost-Effective & Scalable –</strong> Affordable solution adaptable to various marine environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+    .about-section {
+        background: linear-gradient(to right, #0a1931, #1b3b6f);
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    .about-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        animation: fadeInDown 1s ease-in-out;
+    }
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+    }
+    .about-box {
+        position: relative;
+        width: 320px;
+        height: 220px;
+        perspective: 1000px;
+    }
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.8s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+    .card-front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+    .card-back {
+        transform: rotateY(180deg);
+    }
+    .about-box:hover .card-front {
+        transform: rotateY(-180deg);
+    }
+    .about-box:hover .card-back {
+        transform: rotateY(0deg);
+    }
+    .hover-text {
+        margin-top: 10px;
+        color: #ffcc00;
+        font-weight: bold;
+    }
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    </style>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-subscribe">
+                <input type="email" placeholder="Your e-mail">
+                <button>Send!</button>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="solarbuoytrack.html">SolarBuoyTrack</a></li>
+                        <li><a href="ballast.html">Ballast Water Treatment</a></li>
+                        <li><a href="turbine.html">Turbine Power Generation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column team-column">
+                    <h3>Our Team</h3>
+                    <p>Khushi Alodhan</p>
+                    <p>Arpita</p>
+                    <p>Kavya Chaudhari</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@yourwebsite.com</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Location: City, Country</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+    .footer {
+        background-color: #04074b;
+        color: white;
+        padding: 40px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .footer:hover {
+        background-color: #0b0e58;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: auto;
+    }
+    .footer-subscribe {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .footer-subscribe input {
+        padding: 10px;
+        border: none;
+        border-radius: 20px 0 0 20px;
+        width: 250px;
+    }
+    .footer-subscribe button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #ff69b4;
+        color: white;
+        border-radius: 0 20px 20px 0;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .footer-subscribe button:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 5px 10px rgba(255, 105, 180, 0.5);
+    }
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .footer-column h3 {
+        margin-bottom: 10px;
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+    .footer-column ul li a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    .footer-column ul li a:hover {
+        color: #ff69b4;
+        text-shadow: 0px 0px 10px rgba(255, 105, 180, 0.8);
+    }
+    .team-column p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-top: 1px solid white;
+        padding-top: 10px;
+        margin-top: 20px;
+    }
+    .social-icons a {
+        color: white;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+    .social-icons a:hover {
+        transform: rotate(10deg) scale(1.2);
+        color: #ff69b4;
+        text-shadow: 0px 0px 10px rgba(255, 105, 180, 0.8);
+    }
+    </style>
+    
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Monitoring Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(output-onlinepngtools.png);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #002b5c;
+            padding: 10px 20px;
+            position: relative;
+            z-index: 100;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 7px 12px;
+            transition: 0.3s;
+        }
+        .nav-menu a:hover {
+            background-color: #00509e;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #80c7ff;
+        }
+        
+        /* Responsive Menu */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #002b5c;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                padding: 10px 0;
+            }
+            .nav-menu a {
+                display: block;
+                padding: 12px 20px;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <img src="home2.png" alt="Home" style="width:60px; height:60px; border-radius: 55px;">
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-menu">
+            <a href="#about-us">About Us</a>
+            <a href="solarbuoytrack.html">SolarBuoyTrack</a>
+            <a href="ballast.html">Ballast Water Treatment</a>
+            <a href="turbine.html">Turbine Power Generation</a>
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
